@@ -15,7 +15,7 @@ exports.userpost = async (req, res) => {
 
     try {
         const preuser = await users.findOne({ email: email });
-
+console.log(preuser)
         if (preuser) {
             res.status(401).json("This user already exist in our databse")
         } else {
